@@ -1,0 +1,13 @@
+unset key
+set ylabel 'Energy (eV)' font "Times-Roman, 24"
+set xtics ("G" 0, "M" 1.48, "K" 2.34, "G" 4.05)
+set ytics -20.0,4.0,10.0 font "Times-Roman, 24"
+set size ratio .8
+set grid
+plot 'PBAND.C.DW.dat' u 1:2:12 w points lt 5 lc rgb "blue"  pt 7 ps variable,'PBAND.Ni.DW.dat' u 1:2 w l lt 1
+
+set term po color
+set o "ngn-dw.eps"
+rep
+pause -1
+
